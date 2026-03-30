@@ -6,6 +6,7 @@ import { ApiResponse } from "../../types/apiContract";
 
 export const Home = () => {
   const [data, setData] = useState<ApiResponse[]>([]);
+  const [favorites, setFavorites] = useState<number[]>([]);
 
   useEffect(() => {
     async function fetchData() {
