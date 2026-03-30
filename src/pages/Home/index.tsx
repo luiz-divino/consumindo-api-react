@@ -23,7 +23,7 @@ export const Home = () => {
   },[]);
 
   return (
-    <div>
+    <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
       <Card>
         <h1>conteudo</h1>
       </Card>
