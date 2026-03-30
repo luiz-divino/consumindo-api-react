@@ -9,12 +9,10 @@ export const Home = () => {
   const [favorites, setFavorites] = useState<number[]>([]);
 
   const toggleFavorite = (id: number) => {
-  setFavorites((prev) => 
-    prev.includes(id) 
-      ? prev.filter(favId => favId !== id)
-      : [...prev, id] 
-  );
-};
+    setFavorites((prev) =>
+      prev.includes(id) ? prev.filter((favId) => favId !== id) : [...prev, id],
+    );
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -38,6 +36,12 @@ export const Home = () => {
             className="bg-white rounded-xl shadow-md p-4 w-full h-full relative"
             key={item.id}
           >
+            <button
+              onClick={() => toggleFavorite(item.id)}
+              className="absolute top-2 right-2 p-2 transition-transform active:scale-125"
+            >
+              {favorites.includes(item.id) ? "❤️" : "🤍"}
+            </button>
             <section className="w-full text-center text-gray-800 flex flex-col items-center justify-center">
               <span className="text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full font-bold uppercase tracking-wider">
                 Nutrição Clínica
