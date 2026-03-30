@@ -8,6 +8,14 @@ export const Home = () => {
   const [data, setData] = useState<ApiResponse[]>([]);
   const [favorites, setFavorites] = useState<number[]>([]);
 
+  const toggleFavorite = (id: number) => {
+  setFavorites((prev) => 
+    prev.includes(id) 
+      ? prev.filter(favId => favId !== id)
+      : [...prev, id] 
+  );
+};
+
   useEffect(() => {
     async function fetchData() {
       try {
