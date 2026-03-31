@@ -140,7 +140,7 @@ npm run build
 ## Comparativo com o Projeto Antigo
 
 <p align="center">
-	<img src="public/images/codigo-antigo.png" alt="Projeto antigo - versão inicial" width="900" />
+	<img src="public/codigo-antigo.png" alt="Projeto antigo - versão inicial" width="900" />
 </p>
 
 ## Próximos Passos que pretendo realizar
